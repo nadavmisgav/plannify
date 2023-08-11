@@ -3,14 +3,16 @@ import Logo from '../../assets/plannify.svg';
 
 export default function Header() {
   return (
-    <div>
-      <nav className="flex justify-center items-center">
-        <Link className="max-w-md" to="/">
-          <img src={Logo} alt="plannify logo" width="30%" />
-        </Link>
-        <ul>
+    <div className="flex items-center">
+      <Link to="/">
+        <img src={Logo} alt="plannify logo" width="100%" height="auto" />
+      </Link>
+      <nav className="ml-auto">
+        <ul className="flex justify-between p-4 px-8 items-center">
           <li>
-            <Link to="/project">Project</Link>
+            <Link className="uppercase tracking-widest font-bold" to="/project">
+              projects
+            </Link>
           </li>
         </ul>
       </nav>
